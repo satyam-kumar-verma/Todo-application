@@ -26,6 +26,7 @@ todosCount = todoList.length;
 function onTodoStatusChange(checkboxId, labelId, todoId) {
     let checkboxElement = document.getElementById(checkboxId);
     let labelElement = document.getElementById(labelId);
+
     /* if(checkboxElement.checked===true){
          labelElement.classList.add("checked");
      }
@@ -34,7 +35,9 @@ function onTodoStatusChange(checkboxId, labelId, todoId) {
      }*/
     //we can use toggle instead of such long if else
     //we don't need to access input checkboxElement
+
     labelElement.classList.toggle("checked");
+
     let todoObjectIndex = todoList.findIndex(function(eachTodo) {
         let eachTodoId = "todo" + eachTodo.uniqueNo;
         if (eachTodoId === todoId) {
@@ -43,7 +46,9 @@ function onTodoStatusChange(checkboxId, labelId, todoId) {
             return false;
         }
     });
+
     let todoObject = todoList[todoObjectIndex];
+
     if (todoObject.isChecked === true) {
         todoObject.isChecked = false;
     } else {
@@ -79,8 +84,10 @@ function onDeleteTodo(todoId) {
 function createAndAppendTodo(todo) {
     //this is to give li element a id    
     let todoId = "todo" + todo.uniqueNo;
+
     //this for id of input checkbox    
     let checkboxId = "checkbox" + todo.uniqueNo;
+    
     //this is to give label a id
     let labelId = "label" + todo.uniqueNo;
 
