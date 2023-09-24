@@ -71,10 +71,7 @@ function onDeleteTodo(todoId) {
         }
     );
 
-    /*
-    this is shortcut of upper code
-    let deletedElementIndex = todoList.indexOf(todoList.todoId);
-     */
+    
 
 
     todoList.splice(deletedElementIndex, 1);
