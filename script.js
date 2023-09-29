@@ -138,6 +138,7 @@ function onAddTodo() {
     let userInputValue = userInputElement.value;
     if (userInputValue === "") {
         alert("Enter Valid Input");
+        return true;
     }
     todosCount = todosCount + 1;
     let newTodo = {
